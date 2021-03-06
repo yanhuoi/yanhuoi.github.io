@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search> 
+  
+  
+    
+    <entry>
+      <title>Hello World</title>
+      <link href="2021/03/06/hello-world/"/>
+      <url>2021/03/06/hello-world/</url>
+      
+        <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><a id="more"></a><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><pre class=" language-bash"><code class="language-bash">$ hexo new <span class="token string">"My New Post"</span></code></pre><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><pre class=" language-bash"><code class="language-bash">$ hexo server</code></pre><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><pre class=" language-bash"><code class="language-bash">$ hexo generate</code></pre><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><pre class=" language-bash"><code class="language-bash">$ hexo deploy</code></pre><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Problems</title>
+      <link href="2021/01/24/Problems/"/>
+      <url>2021/01/24/Problems/</url>
+      
+        <content type="html"><![CDATA[<h1 id="博客使用以下该格式不能正常显示图片-尝试了各种方法都没解决"><a href="#博客使用以下该格式不能正常显示图片-尝试了各种方法都没解决" class="headerlink" title="博客使用以下该格式不能正常显示图片,尝试了各种方法都没解决"></a>博客使用以下该格式不能正常显示图片,尝试了各种方法都没解决</h1><a id="more"></a><h3 id="！-美图-meitu1-jpg"><a href="#！-美图-meitu1-jpg" class="headerlink" title="！[美图] (meitu1.jpg)"></a>！[美图] (meitu1.jpg)</h3>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>开始</title>
+      <link href="2018/09/07/%E5%BC%80%E5%A7%8B/"/>
+      <url>2018/09/07/%E5%BC%80%E5%A7%8B/</url>
+      
+        <content type="html"><![CDATA[<h1 id="分享交流计算机编程知识"><a href="#分享交流计算机编程知识" class="headerlink" title="分享交流计算机编程知识"></a>分享交流计算机编程知识</h1><h2 id="一起加油努力"><a href="#一起加油努力" class="headerlink" title="一起加油努力"></a>一起加油努力</h2><h3 id="不断相互学习"><a href="#不断相互学习" class="headerlink" title="不断相互学习"></a>不断相互学习</h3><h1 id="解决编程问题"><a href="#解决编程问题" class="headerlink" title="解决编程问题"></a>解决编程问题</h1><a id="more"></a><ul><li>列表1</li><li>列表2<br>  a 子列表1<br>  b 子列表2</li><li>列表3</li></ul><hr><p>添加链接</p><p><a href="https://tool.liumingye.cn/">刘明野工具箱</a></p><hr><p>引用图片</p><p><img src="https://img.iplaysoft.com/wp-content/uploads/2019/free-images/free_stock_photo.jpg" alt="美图"></p><hr><p><em>字体斜体</em></p><p><strong>字体加粗</strong></p><hr><p>单行代码引用<br><code>&lt;html&gt;&lt;/html&gt;</code> </p><p>多行代码引用</p><pre><code>&lt;!DOCTYPE html&gt;&lt;html lang="en"&gt;&lt;head&gt;    &lt;meta charset="UTF-8"&gt;    &lt;title&gt;Document&lt;/title&gt;&lt;/head&gt;&lt;body&gt;    &lt;/body&gt;&lt;/html&gt;</code></pre><hr><blockquote><p>引用内容格式</p></blockquote><hr><h2 id="烟火"><a href="#烟火" class="headerlink" title="烟火"></a>烟火</h2>]]></content>
+      
+      
+      <categories>
+          
+          <category> Markdown </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Typora </tag>
+            
+            <tag> Markdown </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+  
+  
+</search>
