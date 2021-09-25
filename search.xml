@@ -20,9 +20,9 @@
       
         <tags>
             
-            <tag> Typora </tag>
-            
             <tag> 课程学习 </tag>
+            
+            <tag> Typora </tag>
             
         </tags>
       
@@ -50,33 +50,6 @@
             <tag> Typora </tag>
             
             <tag> 计算机编码 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>开始</title>
-      <link href="2018/09/07/%E5%BC%80%E5%A7%8B/"/>
-      <url>2018/09/07/%E5%BC%80%E5%A7%8B/</url>
-      
-        <content type="html"><![CDATA[<h1 id="分享交流计算机编程知识"><a href="#分享交流计算机编程知识" class="headerlink" title="分享交流计算机编程知识"></a>分享交流计算机编程知识</h1><h2 id="一起加油努力"><a href="#一起加油努力" class="headerlink" title="一起加油努力"></a>一起加油努力</h2><h3 id="不断相互学习"><a href="#不断相互学习" class="headerlink" title="不断相互学习"></a>不断相互学习</h3><h1 id="解决编程问题"><a href="#解决编程问题" class="headerlink" title="解决编程问题"></a>解决编程问题</h1><a id="more"></a><ul><li>列表1</li><li>列表2<br>  a 子列表1<br>  b 子列表2</li><li>列表3</li></ul><hr><p>添加链接</p><p><a href="https://tool.liumingye.cn/">刘明野工具箱</a></p><hr><p>引用图片</p><p><img src="https://img.iplaysoft.com/wp-content/uploads/2019/free-images/free_stock_photo.jpg" alt="美图"></p><hr><p><em>字体斜体</em></p><p><strong>字体加粗</strong></p><hr><p>单行代码引用<br><code>&lt;html&gt;&lt;/html&gt;</code> </p><p>多行代码引用</p><pre><code>&lt;!DOCTYPE html&gt;&lt;html lang="en"&gt;&lt;head&gt;    &lt;meta charset="UTF-8"&gt;    &lt;title&gt;Document&lt;/title&gt;&lt;/head&gt;&lt;body&gt;    &lt;/body&gt;&lt;/html&gt;</code></pre><hr><blockquote><p>引用内容格式</p></blockquote><hr><h2 id="烟火"><a href="#烟火" class="headerlink" title="烟火"></a>烟火</h2>]]></content>
-      
-      
-      <categories>
-          
-          <category> Markdown </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> Typora </tag>
-            
-            <tag> Markdown </tag>
             
         </tags>
       
