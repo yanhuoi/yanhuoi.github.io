@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>数据库语法笔记</title>
+      <link href="2021/10/02/database/"/>
+      <url>2021/10/02/database/</url>
+      
+        <content type="html"><![CDATA[<h3 id="数据库和表的基本操作"><a href="#数据库和表的基本操作" class="headerlink" title="数据库和表的基本操作"></a>数据库和表的基本操作</h3><p>连接数据库，输入命令:<code>mysql -u用户名 -p密码</code></p><p>注意：<font style="color:red;font-size:16px">命令结尾要加英文状态的分号;</font></p><h4 id="1-创建数据库"><a href="#1-创建数据库" class="headerlink" title="1.创建数据库"></a>1.创建数据库</h4><p>语法：<code>create database 数据库名;</code></p><p>查看MySQL中已经存在的数据库,命令：<code>show databases;</code></p><p>选择数据库，命令：<code>use 数据库名;</code></p><p>注：<font style="color:red;font-size:16px">数据库名区分大小写，同样表中的字段也区分</font></p><h4 id="2-创建表"><a href="#2-创建表" class="headerlink" title="2.创建表"></a>2.创建表</h4><p>语法：</p><pre class=" language-数据库"><code class="language-数据库">create table 表名(    字段名1 数据类型,    字段名2 数据类型);</code></pre><p>查看表的基本结构，命令：<code>describe 表名;</code>  简写为<code>desc 表名;</code></p><p>查看数据库存在的表，命令：<code>show tables;</code></p><p>查看表的详细结构，命令：<code>show create table 表名;</code></p><h4 id="3-使用主键约束"><a href="#3-使用主键约束" class="headerlink" title="3.使用主键约束"></a>3.使用主键约束</h4><p>添加主键约束，有以下两种方式：</p><ul><li><p>在定义列的同时指定主键</p><pre class=" language-数据库"><code class="language-数据库">create table 表名(    字段名1 数据类型 primary key,    字段名2 数据类型);</code></pre></li><li><p>在定义完字段后再指定主键</p><pre class=" language-数据库"><code class="language-数据库">create table 表名(    字段名1 数据类型,    字段名2 数据类型,    primary key(字段名1));</code></pre></li></ul><p>两者有区别，前者不赋初值，后者赋值为0</p><p>也可以使用联合主键,即 primay key(字段名1，字段名2);</p><p>注：<font style="color:red;font-size:16px">表格按主键排序</font></p><h4 id="4-外键约束"><a href="#4-外键约束" class="headerlink" title="4.外键约束"></a>4.外键约束</h4><p>语法:<code>constraint 外键名 foreign key 字段名 references 主表名(主键名)</code></p><p>例子:给员工表(t_emp)添加外键；</p><pre class=" language-数据库"><code class="language-数据库">CREATE TABLE t_dept(    deptId INT PRIMARY KEY,    name VARCHAR(22),    location VARCHAR(50));</code></pre><pre class=" language-数据库"><code class="language-数据库">CREATE TABLE t_emp(    id INT PRIMARY KEY,    name VARCHAR(22),    deptId INT,    CONSTRAINT fk_emp_dept1 FOREIGN KEY(deptId) REFERENCES t_dept(deptId));</code></pre><p>deptId是t_emp的外键</p><p>注:<font style="color:red;font-size:16px">已经是外键的列不能再设置为主键</font></p><p><font style="color:red;font-size:16px">&nbsp; 在设置的外键的表内，也要加上原主键字段及其数据类型</font></p><h4 id="5-添加常用约束"><a href="#5-添加常用约束" class="headerlink" title="5.添加常用约束"></a>5.添加常用约束</h4><ul><li><p>唯一约束</p><p>Unique ，要求该列唯一，允许为空，但只能有一个空值</p><p>例如：<code>name VARCHAR(22) UNIQUE</code></p></li><li><p>非空约束</p><p>NOT NULL</p><p>例如：<code> name VARCHAR(22) NOT NULL,</code></p></li><li><p>默认约束</p><p>DEFAULT;给字段设置一个默认值</p><p>例如：<code>sex VARCHAR(2) DEFAULT '男'</code></p></li><li><p>设置表的属性值自动增加</p><p>auto_increment;</p><p>例如: <code> id int PRIMARY KEY AUTO_INCREMENT,</code></p><p>注意:</p><ul><li><p><font style="color:red;font-size:16px">如果是添加字符串型默认值要使用单引号，如果是整型则不需要加任何符号；</font></p></li><li><p>如果要添加的是中文默认值，则需要加上DEFAULT CHARSET=utf8;使用英文字符则不需要。</p><p>例如：</p><pre class=" language-数据库"><code class="language-数据库">CREATE TABLE t_emp(    id INT PRIMARY KEY,    name VARCHAR(22),    sex VARCHAR(2) DEFAULT '男') DEFAULT CHARSET=utf8;</code></pre></li></ul></li></ul><hr><p>####6.修改表名</p><p>语法：<code>alter table 旧表名 rename 新表名</code></p><h4 id="7-修改字段名及字段数据类型"><a href="#7-修改字段名及字段数据类型" class="headerlink" title="7.修改字段名及字段数据类型"></a>7.修改字段名及字段数据类型</h4><h5 id="修改字段名"><a href="#修改字段名" class="headerlink" title="修改字段名"></a>修改字段名</h5><p>语法：<code>alter table 表名 change 旧字段名 新字段名 新数据类型</code></p><p>例如：<code>alter table mall_products change prod_id ID varchar(20);</code></p><p>注:<font style="color:red;font-size:16px">如果不需要修改字段的数据类型,可以把新字段的数据类型设置为和原来一样</font><code>但不要空着</code></p><h5 id="修改字段数据类型"><a href="#修改字段数据类型" class="headerlink" title="修改字段数据类型"></a>修改字段数据类型</h5><p>语法规则：<code>alter table 表名 modify 字段名 数据类型</code></p><h4 id="8-添加删除字段"><a href="#8-添加删除字段" class="headerlink" title="8.添加删除字段"></a>8.添加删除字段</h4><h5 id="添加字段"><a href="#添加字段" class="headerlink" title="添加字段"></a>添加字段</h5><p>语法：<code>alter table 表名 add 新字段名 数据类型[约束条件][FIRST|AFTER] 已存在字段名;</code></p><p><font style="color:red;font-size:16px">若不做[FIRST|AFTER]的位置说明,默认放在表的最后一列.</font></p><ul><li>在表的最后一列添加字段，<code>ALTER TABLE Mall_products ADD prod_country varchar(30);</code></li><li>在表的第一列添加字段，<code>ALTER TABLE Mall_products ADD prod_country varchar(30) FIRST;</code></li><li>在表的指定列后添加字段，<code>ALTER TABLE Mall_products ADD prod_country varchar(30) AFTER prod_name;</code></li></ul><h5 id="删除字段"><a href="#删除字段" class="headerlink" title="删除字段"></a>删除字段</h5><p>语法：<code>alter table 表名 drop字段名;</code></p><p>例如：<code>alter table mall_products drop prod_price;</code></p><h4 id="9-修改字段的排列位置"><a href="#9-修改字段的排列位置" class="headerlink" title="9.修改字段的排列位置"></a>9.修改字段的排列位置</h4><p>语法：<code>alter table 表名 modify 字段1 数据类型 FIRST|AFTER 字段名2</code></p><ul><li>修改字段为表的第一个字段，<code>ALTER TABLE Mall_products MODIFY prod_price FLOAT FIRST;</code></li><li>修改字段到表的指定列之后，<code>ALTER TABLE Mall_products MODIFY prod_price FLOAT AFTER prod_country;</code></li></ul><h4 id="10-删除表的外键约束"><a href="#10-删除表的外键约束" class="headerlink" title="10.删除表的外键约束"></a>10.删除表的外键约束</h4><p>语法：<code>alter table 表名 drop foreign key 外键约束名</code></p><p><font style="color:red;font-size:16px">这个外建名，就是添加约束时的一个外键名</font></p><h4 id="11-数据操作"><a href="#11-数据操作" class="headerlink" title="11.数据操作"></a>11.数据操作</h4><h5 id="（1）插入数据"><a href="#（1）插入数据" class="headerlink" title="（1）插入数据"></a>（1）插入数据</h5><p>语法：<code>insert into 表名(字段名) values(内容)</code></p><p>例如：<code>insert into mall_products(id,country_id) values(1,86);</code></p><p>也可以插入多条记录,语法：<code>INSERT INTO 表名 (字段名) VALUES (内容1), (内容2), (内容3);</code></p><h5 id="（2）更新数据"><a href="#（2）更新数据" class="headerlink" title="（2）更新数据"></a>（2）更新数据</h5><p>语法：<code>UPDATE 表名 SET 字段名1 = 内容1, 字段名2 = 内容2, 字段名3 = 内容3 WHERE 过滤条件;</code></p><p>例如：<code>update mall_products set country_name='Pakistan',country_id=92 where id = 2;</code></p><p><font style="color:red;font-size:16px">修改id为2的元组内容</font></p><h5 id="（3）删除数据"><a href="#（3）删除数据" class="headerlink" title="（3）删除数据"></a>（3）删除数据</h5><p>语法：<code>delete from 表名 where 条件语句;</code></p><p>例如：delete from mall_product where id =2 or id =3; 同时删除两行。</p><p>delete from 表名; 删除表中所有行</p><p>truncate table 表名; 删除的是表</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 数据库 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 课程学习 </tag>
+            
+            <tag> Typora </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>计算机网络第一章笔记</title>
       <link href="2021/09/25/First_jw/"/>
       <url>2021/09/25/First_jw/</url>

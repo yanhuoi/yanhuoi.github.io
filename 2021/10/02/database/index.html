@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="contact, Yanhuo&#39;s Blog">
+    <meta name="keywords" content="数据库语法笔记, Yanhuo&#39;s Blog">
     <meta name="description" content="学习">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>contact | Yanhuo&#39;s Blog</title>
+    <title>数据库语法笔记 | Yanhuo&#39;s Blog</title>
     <link rel="icon" type="image/png" href="/logo.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -449,75 +449,555 @@
 
 </header>
 
-    <div class="bg-cover pd-header about-cover">
-    <div class="container">
-    <div class="row">
-    <div class="col s10 offset-s1 m8 offset-m2 l8 offset-l2">
-        <div class="brand">
-            <div class="title center-align">
-                
-                Never Give Up
-                
-            </div>
+    
 
-            <div class="description center-align">
-                
-                <span id="subtitle"></span>
-                <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
-                <script>
-                    var typed = new Typed("#subtitle", {
-                        strings: [ 
-                            
-                                "穷且益坚，不坠青云之志。",
-                            
-                                "Difficult as conditions are,one still refuses to give up.",
-                            
-                        ],
-                        startDelay: 300,
-                        typeSpeed: 100,
-                        loop: true,
-                        backSpeed: 50,
-                        showCursor: true
-                    });
-                </script>
-                
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/26.png')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">数据库语法笔记</h1>
+                </div>
             </div>
         </div>
     </div>
 </div>
 
 
-<script>
-    // 每天切换 banner 图.  Switch banner image every day.
-    var bannerUrl = "/medias/banner/" + new Date().getDay() + '.jpg';
-    $('.bg-cover').css('background-image', 'url(' + bannerUrl + ')');
-</script>
 
 
-    </div>
-</div>
+<main class="post-container content">
 
-<main class="content">
-    <div id="contact" class="container chip-container">
-        <div class="card">
-            <div class="card-content">
-                <div class="tag-title center-align">
-                    <i class="fas fa-comments"></i>&nbsp;&nbsp;留言板
+    
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        width: 345px;
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        padding: 35px 0 15px 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content {
+        padding-bottom: 30px;
+        overflow: auto;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+
+        position: absolute;
+        right: 23.5vw;
+        display: block;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 15px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/%E8%AF%BE%E7%A8%8B%E5%AD%A6%E4%B9%A0/">
+                                <span class="chip bg-color">课程学习</span>
+                            </a>
+                        
+                            <a href="/tags/Typora/">
+                                <span class="chip bg-color">Typora</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/" class="post-category">
+                                数据库
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2021-10-02
                 </div>
                 
+
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
+                    2021-10-02
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
+                    1.1k
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
+                    4 分
+                </div>
+                
+
+                
+                    <div id="busuanzi_container_page_pv" class="info-break-policy">
+                        <i class="far fa-eye fa-fw"></i>阅读次数:&nbsp;&nbsp;
+                        <span id="busuanzi_value_page_pv"></span>
+                    </div>
+				
             </div>
         </div>
-        <div class="card">
-            
+        <hr class="clearfix">
+
+        
+
+        
+
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <h3 id="数据库和表的基本操作"><a href="#数据库和表的基本操作" class="headerlink" title="数据库和表的基本操作"></a>数据库和表的基本操作</h3><p>连接数据库，输入命令:<code>mysql -u用户名 -p密码</code></p>
+<p>注意：<font style="color:red;font-size:16px">命令结尾要加英文状态的分号;</font></p>
+<h4 id="1-创建数据库"><a href="#1-创建数据库" class="headerlink" title="1.创建数据库"></a>1.创建数据库</h4><p>语法：<code>create database 数据库名;</code></p>
+<p>查看MySQL中已经存在的数据库,命令：<code>show databases;</code></p>
+<p>选择数据库，命令：<code>use 数据库名;</code></p>
+<p>注：<font style="color:red;font-size:16px">数据库名区分大小写，同样表中的字段也区分</font></p>
+<h4 id="2-创建表"><a href="#2-创建表" class="headerlink" title="2.创建表"></a>2.创建表</h4><p>语法：</p>
+<pre class=" language-数据库"><code class="language-数据库">create table 表名
+(
+    字段名1 数据类型,
+    字段名2 数据类型
+);
+</code></pre>
+<p>查看表的基本结构，命令：<code>describe 表名;</code>  简写为<code>desc 表名;</code></p>
+<p>查看数据库存在的表，命令：<code>show tables;</code></p>
+<p>查看表的详细结构，命令：<code>show create table 表名;</code></p>
+<h4 id="3-使用主键约束"><a href="#3-使用主键约束" class="headerlink" title="3.使用主键约束"></a>3.使用主键约束</h4><p>添加主键约束，有以下两种方式：</p>
+<ul>
+<li><p>在定义列的同时指定主键</p>
+<pre class=" language-数据库"><code class="language-数据库">create table 表名
+(
+    字段名1 数据类型 primary key,
+    字段名2 数据类型
+);
+</code></pre>
+</li>
+<li><p>在定义完字段后再指定主键</p>
+<pre class=" language-数据库"><code class="language-数据库">create table 表名
+(
+    字段名1 数据类型,
+    字段名2 数据类型,
+    primary key(字段名1)
+);
+</code></pre>
+</li>
+</ul>
+<p>两者有区别，前者不赋初值，后者赋值为0</p>
+<p>也可以使用联合主键,即 primay key(字段名1，字段名2);</p>
+<p>注：<font style="color:red;font-size:16px">表格按主键排序</font></p>
+<h4 id="4-外键约束"><a href="#4-外键约束" class="headerlink" title="4.外键约束"></a>4.外键约束</h4><p>语法:<code>constraint 外键名 foreign key 字段名 references 主表名(主键名)</code></p>
+<p>例子:给员工表(t_emp)添加外键；</p>
+<pre class=" language-数据库"><code class="language-数据库">CREATE TABLE t_dept
+(
+    deptId INT PRIMARY KEY,
+    name VARCHAR(22),
+    location VARCHAR(50)
+);
+</code></pre>
+<pre class=" language-数据库"><code class="language-数据库">CREATE TABLE t_emp
+(
+    id INT PRIMARY KEY,
+    name VARCHAR(22),
+    deptId INT,
+    CONSTRAINT fk_emp_dept1 FOREIGN KEY(deptId) REFERENCES t_dept(deptId)
+);
+</code></pre>
+<p>deptId是t_emp的外键</p>
+<p>注:<font style="color:red;font-size:16px">已经是外键的列不能再设置为主键</font></p>
+<p><font style="color:red;font-size:16px">&nbsp; 在设置的外键的表内，也要加上原主键字段及其数据类型</font></p>
+<h4 id="5-添加常用约束"><a href="#5-添加常用约束" class="headerlink" title="5.添加常用约束"></a>5.添加常用约束</h4><ul>
+<li><p>唯一约束</p>
+<p>Unique ，要求该列唯一，允许为空，但只能有一个空值</p>
+<p>例如：<code>name VARCHAR(22) UNIQUE</code></p>
+</li>
+<li><p>非空约束</p>
+<p>NOT NULL</p>
+<p>例如：<code> name VARCHAR(22) NOT NULL,</code></p>
+</li>
+<li><p>默认约束</p>
+<p>DEFAULT;给字段设置一个默认值</p>
+<p>例如：<code>sex VARCHAR(2) DEFAULT '男'</code></p>
+</li>
+<li><p>设置表的属性值自动增加</p>
+<p>auto_increment;</p>
+<p>例如: <code> id int PRIMARY KEY AUTO_INCREMENT,</code></p>
+<p>注意:</p>
+<ul>
+<li><p><font style="color:red;font-size:16px">如果是添加字符串型默认值要使用单引号，如果是整型则不需要加任何符号；</font></p>
+</li>
+<li><p>如果要添加的是中文默认值，则需要加上DEFAULT CHARSET=utf8;使用英文字符则不需要。</p>
+<p>例如：</p>
+<pre class=" language-数据库"><code class="language-数据库">CREATE TABLE t_emp(
+    id INT PRIMARY KEY,
+    name VARCHAR(22),
+    sex VARCHAR(2) DEFAULT '男'
+) DEFAULT CHARSET=utf8;
+</code></pre>
+</li>
+</ul>
+</li>
+</ul>
+<hr>
+<p>####6.修改表名</p>
+<p>语法：<code>alter table 旧表名 rename 新表名</code></p>
+<h4 id="7-修改字段名及字段数据类型"><a href="#7-修改字段名及字段数据类型" class="headerlink" title="7.修改字段名及字段数据类型"></a>7.修改字段名及字段数据类型</h4><h5 id="修改字段名"><a href="#修改字段名" class="headerlink" title="修改字段名"></a>修改字段名</h5><p>语法：<code>alter table 表名 change 旧字段名 新字段名 新数据类型</code></p>
+<p>例如：<code>alter table mall_products change prod_id ID varchar(20);</code></p>
+<p>注:<font style="color:red;font-size:16px">如果不需要修改字段的数据类型,可以把新字段的数据类型设置为和原来一样</font><code>但不要空着</code></p>
+<h5 id="修改字段数据类型"><a href="#修改字段数据类型" class="headerlink" title="修改字段数据类型"></a>修改字段数据类型</h5><p>语法规则：<code>alter table 表名 modify 字段名 数据类型</code></p>
+<h4 id="8-添加删除字段"><a href="#8-添加删除字段" class="headerlink" title="8.添加删除字段"></a>8.添加删除字段</h4><h5 id="添加字段"><a href="#添加字段" class="headerlink" title="添加字段"></a>添加字段</h5><p>语法：<code>alter table 表名 add 新字段名 数据类型[约束条件][FIRST|AFTER] 已存在字段名;</code></p>
+<p><font style="color:red;font-size:16px">若不做[FIRST|AFTER]的位置说明,默认放在表的最后一列.</font></p>
+<ul>
+<li>在表的最后一列添加字段，<code>ALTER TABLE Mall_products ADD prod_country varchar(30);</code></li>
+<li>在表的第一列添加字段，<code>ALTER TABLE Mall_products ADD prod_country varchar(30) FIRST;</code></li>
+<li>在表的指定列后添加字段，<code>ALTER TABLE Mall_products ADD prod_country varchar(30) AFTER prod_name;</code></li>
+</ul>
+<h5 id="删除字段"><a href="#删除字段" class="headerlink" title="删除字段"></a>删除字段</h5><p>语法：<code>alter table 表名 drop字段名;</code></p>
+<p>例如：<code>alter table mall_products drop prod_price;</code></p>
+<h4 id="9-修改字段的排列位置"><a href="#9-修改字段的排列位置" class="headerlink" title="9.修改字段的排列位置"></a>9.修改字段的排列位置</h4><p>语法：<code>alter table 表名 modify 字段1 数据类型 FIRST|AFTER 字段名2</code></p>
+<ul>
+<li>修改字段为表的第一个字段，<code>ALTER TABLE Mall_products MODIFY prod_price FLOAT FIRST;</code></li>
+<li>修改字段到表的指定列之后，<code>ALTER TABLE Mall_products MODIFY prod_price FLOAT AFTER prod_country;</code></li>
+</ul>
+<h4 id="10-删除表的外键约束"><a href="#10-删除表的外键约束" class="headerlink" title="10.删除表的外键约束"></a>10.删除表的外键约束</h4><p>语法：<code>alter table 表名 drop foreign key 外键约束名</code></p>
+<p><font style="color:red;font-size:16px">这个外建名，就是添加约束时的一个外键名</font></p>
+<h4 id="11-数据操作"><a href="#11-数据操作" class="headerlink" title="11.数据操作"></a>11.数据操作</h4><h5 id="（1）插入数据"><a href="#（1）插入数据" class="headerlink" title="（1）插入数据"></a>（1）插入数据</h5><p>语法：<code>insert into 表名(字段名) values(内容)</code></p>
+<p>例如：<code>insert into mall_products(id,country_id) values(1,86);</code></p>
+<p>也可以插入多条记录,语法：<code>INSERT INTO 表名 (字段名) VALUES (内容1), (内容2), (内容3);</code></p>
+<h5 id="（2）更新数据"><a href="#（2）更新数据" class="headerlink" title="（2）更新数据"></a>（2）更新数据</h5><p>语法：<code>UPDATE 表名 SET 字段名1 = 内容1, 字段名2 = 内容2, 字段名3 = 内容3 WHERE 过滤条件;</code></p>
+<p>例如：<code>update mall_products set country_name='Pakistan',country_id=92 where id = 2;</code></p>
+<p><font style="color:red;font-size:16px">修改id为2的元组内容</font></p>
+<h5 id="（3）删除数据"><a href="#（3）删除数据" class="headerlink" title="（3）删除数据"></a>（3）删除数据</h5><p>语法：<code>delete from 表名 where 条件语句;</code></p>
+<p>例如：delete from mall_product where id =2 or id =3; 同时删除两行。</p>
+<p>delete from 表名; 删除表中所有行</p>
+<p>truncate table 表名; 删除的是表</p>
+
+                
+            </div>
+            <hr/>
 
             
 
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        文章作者:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="/about" rel="external nofollow noreferrer">yanhuo</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        文章链接:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="https://yanhuoi.github.io/2021/10/02/database/">https://yanhuoi.github.io/2021/10/02/database/</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        版权声明:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    本博客所有文章除特別声明外，均采用
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    许可协议。转载请注明来源
+                    <a href="/about" target="_blank">yanhuo</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/tags/%E8%AF%BE%E7%A8%8B%E5%AD%A6%E4%B9%A0/">
+                                    <span class="chip bg-color">课程学习</span>
+                                </a>
+                            
+                                <a href="/tags/Typora/">
+                                    <span class="chip bg-color">Typora</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
             
+                <style>
+    #reward {
+        margin: 40px 0;
+        text-align: center;
+    }
+
+    #reward .reward-link {
+        font-size: 1.4rem;
+        line-height: 38px;
+    }
+
+    #reward .btn-floating:hover {
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    #rewardModal {
+        width: 320px;
+        height: 350px;
+    }
+
+    #rewardModal .reward-title {
+        margin: 15px auto;
+        padding-bottom: 5px;
+    }
+
+    #rewardModal .modal-content {
+        padding: 10px;
+    }
+
+    #rewardModal .close {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 1.3rem;
+        line-height: 20px;
+        cursor: pointer;
+    }
+
+    #rewardModal .close:hover {
+        color: #ef5350;
+        transform: scale(1.3);
+        -moz-transform:scale(1.3);
+        -webkit-transform:scale(1.3);
+        -o-transform:scale(1.3);
+    }
+
+    #rewardModal .reward-tabs {
+        margin: 0 auto;
+        width: 210px;
+    }
+
+    .reward-tabs .tabs {
+        height: 38px;
+        margin: 10px auto;
+        padding-left: 0;
+    }
+
+    .reward-content ul {
+        padding-left: 0 !important;
+    }
+
+    .reward-tabs .tabs .tab {
+        height: 38px;
+        line-height: 38px;
+    }
+
+    .reward-tabs .tab a {
+        color: #fff;
+        background-color: #ccc;
+    }
+
+    .reward-tabs .tab a:hover {
+        background-color: #ccc;
+        color: #fff;
+    }
+
+    .reward-tabs .wechat-tab .active {
+        color: #fff !important;
+        background-color: #22AB38 !important;
+    }
+
+    .reward-tabs .alipay-tab .active {
+        color: #fff !important;
+        background-color: #019FE8 !important;
+    }
+
+    .reward-tabs .reward-img {
+        width: 210px;
+        height: 210px;
+    }
+</style>
+
+<div id="reward">
+    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-medium waves-effect waves-light red">赏</a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fas fa-times"></i></a>
+            <h4 class="reward-title">你的赏识是我前进的动力</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                    </ul>
+                    <div id="alipay">
+                        <img src="/medias/reward/alipay.png" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                    <div id="wechat">
+                        <img src="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('.tabs').tabs();
+    });
+</script>
 
             
+        </div>
+    </div>
 
-            
-            <style>
+    
+
+    
+
+    
+
+    
+
+    
+        <style>
     .valine-card {
         margin: 1.5rem auto;
     }
@@ -782,17 +1262,247 @@
 <!--酷Q推送-->
 
 
-            
+    
 
-            
+    
 
-            
+    
 
-            
+    
 
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
+            <div class="card">
+                <a href="/2021/10/02/database/">
+                    <div class="card-image">
+                        
+                        <img src="/medias/featureimages/26.png" class="responsive-img" alt="数据库语法笔记">
+                        
+                        <span class="card-title">数据库语法笔记</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            MySQL数据库语法笔记！
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-10-02
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/" class="post-category">
+                                    数据库
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E8%AF%BE%E7%A8%8B%E5%AD%A6%E4%B9%A0/">
+                        <span class="chip bg-color">课程学习</span>
+                    </a>
+                    
+                    <a href="/tags/Typora/">
+                        <span class="chip bg-color">Typora</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2021/09/25/First_jw/">
+                    <div class="card-image">
+                        
+                        <img src="/medias/featureimages/25.png" class="responsive-img" alt="计算机网络第一章笔记">
+                        
+                        <span class="card-title">计算机网络第一章笔记</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            计算机网络总体概述！
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-09-25
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" class="post-category">
+                                    计算机网络
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E8%AF%BE%E7%A8%8B%E5%AD%A6%E4%B9%A0/">
+                        <span class="chip bg-color">课程学习</span>
+                    </a>
+                    
+                    <a href="/tags/Typora/">
+                        <span class="chip bg-color">Typora</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget card" style="background-color: white;">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
         </div>
     </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
 </main>
+
+
 
 
     <footer class="page-footer bg-color">
