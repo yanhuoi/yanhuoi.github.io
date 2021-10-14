@@ -610,21 +610,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-10-02
+                    2021-10-14
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.1k
+                    1.9k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    4 分
+                    7 分
                 </div>
                 
 
@@ -736,8 +736,7 @@
 </li>
 </ul>
 <hr>
-<p>####6.修改表名</p>
-<p>语法：<code>alter table 旧表名 rename 新表名</code></p>
+<h4 id="6-修改表名"><a href="#6-修改表名" class="headerlink" title="6.修改表名"></a>6.修改表名</h4><p>语法：<code>alter table 旧表名 rename 新表名</code></p>
 <h4 id="7-修改字段名及字段数据类型"><a href="#7-修改字段名及字段数据类型" class="headerlink" title="7.修改字段名及字段数据类型"></a>7.修改字段名及字段数据类型</h4><h5 id="修改字段名"><a href="#修改字段名" class="headerlink" title="修改字段名"></a>修改字段名</h5><p>语法：<code>alter table 表名 change 旧字段名 新字段名 新数据类型</code></p>
 <p>例如：<code>alter table mall_products change prod_id ID varchar(20);</code></p>
 <p>注:<font style="color:red;font-size:16px">如果不需要修改字段的数据类型,可以把新字段的数据类型设置为和原来一样</font><code>但不要空着</code></p>
@@ -768,6 +767,32 @@
 <p>例如：delete from mall_product where id =2 or id =3; 同时删除两行。</p>
 <p>delete from 表名; 删除表中所有行</p>
 <p>truncate table 表名; 删除的是表</p>
+<h4 id="12-SELECT查询"><a href="#12-SELECT查询" class="headerlink" title="12.SELECT查询"></a>12.SELECT查询</h4><h5 id="1-查询数据表中字段的内容"><a href="#1-查询数据表中字段的内容" class="headerlink" title="(1)查询数据表中字段的内容"></a>(1)查询数据表中字段的内容</h5><ul>
+<li><p>查询数据表中指定字段的内容</p>
+<p>语法格式：SELECT 字段名 FROM 表名;<br>当同时查询”多个字段”下的内容时，只需要在字段之间加入逗号。<br>语法格式：SELECT 字段名1,字段名2 FROM 表名;</p>
+</li>
+<li><p>查询数据表中的所有内容</p>
+<p>SELECT * FROM 表名;</p>
+</li>
+</ul>
+<p><code>小提示： MySQL 中的 SQL 语句对关键字的大小写不敏感， SELECT 和 select 是一样的。 但是许多开发者更喜欢将关键字大写，表名和字段名使用小写，养成这种习惯，以后写出来的脚本就更容易阅读和维护了。</code></p>
+<h5 id="2-带IN关键字条件查询"><a href="#2-带IN关键字条件查询" class="headerlink" title="(2)带IN关键字条件查询"></a>(2)带IN关键字条件查询</h5><p>语法格式：<code>SELECT 字段名 FORM 表名 WHERE 字段名 IN(n1,n2,n3,...);</code><br>        等价于 SELECT 字段名 FROM 表名 WHERE 字段名 = n1 OR 字段名 = n2 OR 字段名……;</p>
+<h5 id="3-带NOT-IN关键字查询"><a href="#3-带NOT-IN关键字查询" class="headerlink" title="(3)带NOT IN关键字查询"></a>(3)带NOT IN关键字查询</h5><p>语法格式：<code>SELECT 字段名 FROM 表名 WHERE 字段名 NOT IN(n1,n2,n3,...);</code></p>
+<h5 id="4-带BETWEEN-AND的范围查询"><a href="#4-带BETWEEN-AND的范围查询" class="headerlink" title="(4)带BETWEEN AND的范围查询"></a>(4)带BETWEEN AND的范围查询</h5><p>语法格式：<code>SELECT 字段名 FROM 表名 WHERE 字段名 BETWEEN n1 AND n2; </code></p>
+<h5 id="5-带NOT-BETWEEN-AND关键字的查询"><a href="#5-带NOT-BETWEEN-AND关键字的查询" class="headerlink" title="(5)带NOT BETWEEN AND关键字的查询"></a>(5)带NOT BETWEEN AND关键字的查询</h5><p>语法格式：<code>SELECT 字段名 FROM 表名 WHERE 字段名 NOT BETWEEN n1 AND n2; </code></p>
+<h5 id="6-带LIKE的字符匹配查询"><a href="#6-带LIKE的字符匹配查询" class="headerlink" title="(6)带LIKE的字符匹配查询"></a>(6)带LIKE的字符匹配查询</h5><p>语法格式：<code>SELECT 字段名 FROM 表名 WHERE 字段名 LIKE '字符%';</code>  其中 % 的位置可以根据需要在字符间变化。<br>B开头的字符，用B%表示，B在中间，用%B%表示。<br>注：对于%B%,通配符%告诉MySQL，返回字符串中间带B字符的记录，不管B前面和后面分别有多少字符。<br>也可以使用通配符_模糊匹配数据内容，但下划线通配符_只能模糊匹配1个字符，如果要匹配多个字符，要多次使用。</p>
+<h5 id="7-去除重复结果"><a href="#7-去除重复结果" class="headerlink" title="(7)去除重复结果"></a>(7)去除重复结果</h5><p>语法格式：<code>SELECT DISTINCT 字段名 FROM 表名;</code></p>
+<h5 id="8-带AND与OR的多条件查询"><a href="#8-带AND与OR的多条件查询" class="headerlink" title="(8) 带AND与OR的多条件查询"></a>(8) 带AND与OR的多条件查询</h5><ul>
+<li><p>AND</p>
+<p>语法格式：<code>SELECT 字段名 FROM 表名 WHERE 表达式1 AND 表达式2; </code><br>例如：SELECT * FROM Mall_products WHERE prod_name LIKE ‘%toy%’ AND prod_price &gt; 5;</p>
+</li>
+<li><p>OR</p>
+<p>语法格式：<code>SELECT 字段名 FROM 表名 WHERE 表达式1 OR 表达式2;</code><br>注: OR 可以和 AND 一起使用。但是 AND 的优先级要高于 OR 的优先级.<br>推荐使用 IN 关键字.</p>
+</li>
+</ul>
+<h5 id="9-对查询结果排序"><a href="#9-对查询结果排序" class="headerlink" title="(9)对查询结果排序"></a>(9)对查询结果排序</h5><p>语法格式：<code>SELECT 字段名 FROM 表名 ORDER BY 字段名 [ASC[DESC]];</code><br>        ASC 升序关键字<br>        DESC 降序关键字</p>
+<h5 id="10-分组查询"><a href="#10-分组查询" class="headerlink" title="(10)分组查询"></a>(10)分组查询</h5><p>语法格式：<code>SELECT 字段名 FROM 表名 GROUP BY 字段名;</code><br>        注：查询的是每个分组中 首次出现的一条记录。</p>
+<h5 id="11-用LIMIT限制查询结果数量"><a href="#11-用LIMIT限制查询结果数量" class="headerlink" title="(11)用LIMIT限制查询结果数量"></a>(11)用LIMIT限制查询结果数量</h5><p>语法格式：<code>SELECT 字段名 FROM 表名 LIMIT [OFFSET,] 记录数;</code><br>参数说明：<br>第一个参数，OFFSET，可选参数，表示偏移量，如果不指定默认值为0，表示从查询结果的第一条记录开始，若偏移量为1，则从查询结果中的第二条记录开始，以此类推。<br>第二个参数，记录数，表示返回查询结果的条数。<br>注：order by 放在限制查询语句之前，选择条件结果之后。</p>
 
                 
             </div>
@@ -1520,7 +1545,7 @@
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">3.7k</span>&nbsp;字
+                class="white-color">4.5k</span>&nbsp;字
             
             
             
