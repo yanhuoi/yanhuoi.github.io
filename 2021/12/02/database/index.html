@@ -1,0 +1,398 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>数据库基础语法总结 | Yanhuo's Blog</title><meta name="keywords" content="总结,数据库,语法"><meta name="author" content="Yanhuo"><meta name="copyright" content="Yanhuo"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="对于数据库上机实验所用基础语法的部分总结">
+<meta property="og:type" content="article">
+<meta property="og:title" content="数据库基础语法总结">
+<meta property="og:url" content="http://yanhuoi.github.io/2021/12/02/database/index.html">
+<meta property="og:site_name" content="Yanhuo&#39;s Blog">
+<meta property="og:description" content="对于数据库上机实验所用基础语法的部分总结">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://yanhuoi.github.io/img/6.jpg">
+<meta property="article:published_time" content="2021-12-02T06:00:00.000Z">
+<meta property="article:modified_time" content="2022-01-22T06:00:00.000Z">
+<meta property="article:author" content="Yanhuo">
+<meta property="article:tag" content="总结">
+<meta property="article:tag" content="数据库">
+<meta property="article:tag" content="语法">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://yanhuoi.github.io/img/6.jpg"><link rel="shortcut icon" href="/img/mylogo8.png"><link rel="canonical" href="http://yanhuoi.github.io/2021/12/02/database/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"search.xml","languages":{"hits_empty":"找不到您查询的内容：${query}"}},
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"简"},
+  noticeOutdate: undefined,
+  highlight: undefined,
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: {"limitCount":50,"languages":{"author":"作者: Yanhuo","link":"链接: ","source":"来源: Yanhuo's Blog","info":"著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。"}},
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: true,
+  islazyload: false,
+  isAnchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '数据库基础语法总结',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2022-01-22 14:00:00'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          const now = new Date()
+          const hour = now.getHours()
+          const isNight = hour <= 6 || hour >= 18
+          if (t === undefined) isNight ? activateDarkMode() : activateLightMode()
+          else if (t === 'light') activateLightMode()
+          else activateDarkMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><link rel="stylesheet" href="//at.alicdn.com/t/font_3354882_r2mgvay00nr.css"><link rel="stylesheet" href="//at.alicdn.com/t/font_3354882_1cxlw8vm3sf.css"><link rel="stylesheet" href="//at.alicdn.com/t/font_3354882_hqxpad2vz0o.css"><link rel="stylesheet" href="http://localhost:3000/css/index.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/static-butterfly/dist/css/index.min.css"><link rel="stylesheet" href="/css/article.css"><meta name="generator" content="Hexo 5.3.0">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="alternate" href="/atom.xml" title="Yanhuo's Blog" type="application/atom+xml">
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/author.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data is-center"><div class="data-item"><a href="/archives/"><div class="headline">文章</div><div class="length-num">5</div></a></div><div class="data-item"><a href="/tags/"><div class="headline">标签</div><div class="length-num">12</div></a></div><div class="data-item"><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 前进</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/artitalk/"><i class="fa-fw fas fa-music"></i><span> 秘密基地</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw iconfont icon-liebiao"></i><span> 更多</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/about/"><i class="fa-fw iconfont icon-moban"></i><span> 关于我</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://travellings.link"><i class="fa-fw iconfont icon-huoche"></i><span> 动力火车</span></a></li></ul></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('/img/6.jpg')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">Yanhuo's Blog</a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 前进</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/artitalk/"><i class="fa-fw fas fa-music"></i><span> 秘密基地</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw iconfont icon-liebiao"></i><span> 更多</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/about/"><i class="fa-fw iconfont icon-moban"></i><span> 关于我</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://travellings.link"><i class="fa-fw iconfont icon-huoche"></i><span> 动力火车</span></a></li></ul></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">数据库基础语法总结</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2021-12-02T06:00:00.000Z" title="发表于 2021-12-02 14:00:00">2021-12-02</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2022-01-22T06:00:00.000Z" title="更新于 2022-01-22 14:00:00">2022-01-22</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E5%AD%A6%E4%B9%A0/">学习</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">1.9k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>6分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="数据库基础语法总结"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h3 id="数据库和表的基本操作"><a href="#数据库和表的基本操作" class="headerlink" title="数据库和表的基本操作"></a>数据库和表的基本操作</h3><p>连接数据库，输入命令:<code>mysql -u用户名 -p密码</code></p>
+<p>注意：<font style="color:red;font-size:16px">命令结尾要加英文状态的分号;</font></p>
+<h4 id="1-创建数据库"><a href="#1-创建数据库" class="headerlink" title="1.创建数据库"></a>1.创建数据库</h4><p>语法：<code>create database 数据库名;</code></p>
+<p>查看MySQL中已经存在的数据库,命令：<code>show databases;</code></p>
+<p>选择数据库，命令：<code>use 数据库名;</code></p>
+<p>注：<font style="color:red;font-size:16px">数据库名区分大小写，同样表中的字段也区分</font></p>
+<h4 id="2-创建表"><a href="#2-创建表" class="headerlink" title="2.创建表"></a>2.创建表</h4><p>语法：</p>
+<pre class=" language-数据库"><code class="language-数据库">create table 表名
+(
+    字段名1 数据类型,
+    字段名2 数据类型
+);
+</code></pre>
+<p>查看表的基本结构，命令：<code>describe 表名;</code>  简写为<code>desc 表名;</code></p>
+<p>查看数据库存在的表，命令：<code>show tables;</code></p>
+<p>查看表的详细结构，命令：<code>show create table 表名;</code></p>
+<h4 id="3-使用主键约束"><a href="#3-使用主键约束" class="headerlink" title="3.使用主键约束"></a>3.使用主键约束</h4><p>添加主键约束，有以下两种方式：</p>
+<ul>
+<li><p>在定义列的同时指定主键</p>
+<pre class=" language-数据库"><code class="language-数据库">create table 表名
+(
+    字段名1 数据类型 primary key,
+    字段名2 数据类型
+);
+</code></pre>
+</li>
+<li><p>在定义完字段后再指定主键</p>
+<pre class=" language-数据库"><code class="language-数据库">create table 表名
+(
+    字段名1 数据类型,
+    字段名2 数据类型,
+    primary key(字段名1)
+);
+</code></pre>
+</li>
+</ul>
+<p>两者有区别，前者不赋初值，后者赋值为0</p>
+<p>也可以使用联合主键,即 primay key(字段名1，字段名2);</p>
+<p>注：<font style="color:red;font-size:16px">表格按主键排序</font></p>
+<h4 id="4-外键约束"><a href="#4-外键约束" class="headerlink" title="4.外键约束"></a>4.外键约束</h4><p>语法:<code>constraint 外键名 foreign key 字段名 references 主表名(主键名)</code></p>
+<p>例子:给员工表(t_emp)添加外键；</p>
+<pre class=" language-数据库"><code class="language-数据库">CREATE TABLE t_dept
+(
+    deptId INT PRIMARY KEY,
+    name VARCHAR(22),
+    location VARCHAR(50)
+);
+</code></pre>
+<pre class=" language-数据库"><code class="language-数据库">CREATE TABLE t_emp
+(
+    id INT PRIMARY KEY,
+    name VARCHAR(22),
+    deptId INT,
+    CONSTRAINT fk_emp_dept1 FOREIGN KEY(deptId) REFERENCES t_dept(deptId)
+);
+</code></pre>
+<p>deptId是t_emp的外键</p>
+<p>注:<font style="color:red;font-size:16px">已经是外键的列不能再设置为主键</font></p>
+<p><font style="color:red;font-size:16px">&nbsp; 在设置的外键的表内，也要加上原主键字段及其数据类型</font></p>
+<h4 id="5-添加常用约束"><a href="#5-添加常用约束" class="headerlink" title="5.添加常用约束"></a>5.添加常用约束</h4><ul>
+<li><p>唯一约束</p>
+<p>Unique ，要求该列唯一，允许为空，但只能有一个空值</p>
+<p>例如：<code>name VARCHAR(22) UNIQUE</code></p>
+</li>
+<li><p>非空约束</p>
+<p>NOT NULL</p>
+<p>例如：<code> name VARCHAR(22) NOT NULL,</code></p>
+</li>
+<li><p>默认约束</p>
+<p>DEFAULT;给字段设置一个默认值</p>
+<p>例如：<code>sex VARCHAR(2) DEFAULT '男'</code></p>
+</li>
+<li><p>设置表的属性值自动增加</p>
+<p>auto_increment;</p>
+<p>例如: <code> id int PRIMARY KEY AUTO_INCREMENT,</code></p>
+<p>注意:</p>
+<ul>
+<li><p><font style="color:red;font-size:16px">如果是添加字符串型默认值要使用单引号，如果是整型则不需要加任何符号；</font></p>
+</li>
+<li><p>如果要添加的是中文默认值，则需要加上DEFAULT CHARSET=utf8;使用英文字符则不需要。</p>
+<p>例如：</p>
+<pre class=" language-数据库"><code class="language-数据库">CREATE TABLE t_emp(
+    id INT PRIMARY KEY,
+    name VARCHAR(22),
+    sex VARCHAR(2) DEFAULT '男'
+) DEFAULT CHARSET=utf8;
+</code></pre>
+</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h4 id="6-修改表名"><a href="#6-修改表名" class="headerlink" title="6.修改表名"></a>6.修改表名</h4><p>语法：<code>alter table 旧表名 rename 新表名</code></p>
+<h4 id="7-修改字段名及字段数据类型"><a href="#7-修改字段名及字段数据类型" class="headerlink" title="7.修改字段名及字段数据类型"></a>7.修改字段名及字段数据类型</h4><h5 id="修改字段名"><a href="#修改字段名" class="headerlink" title="修改字段名"></a>修改字段名</h5><p>语法：<code>alter table 表名 change 旧字段名 新字段名 新数据类型</code></p>
+<p>例如：<code>alter table mall_products change prod_id ID varchar(20);</code></p>
+<p>注:<font style="color:red;font-size:16px">如果不需要修改字段的数据类型,可以把新字段的数据类型设置为和原来一样</font><code>但不要空着</code></p>
+<h5 id="修改字段数据类型"><a href="#修改字段数据类型" class="headerlink" title="修改字段数据类型"></a>修改字段数据类型</h5><p>语法规则：<code>alter table 表名 modify 字段名 数据类型</code></p>
+<h4 id="8-添加删除字段"><a href="#8-添加删除字段" class="headerlink" title="8.添加删除字段"></a>8.添加删除字段</h4><h5 id="添加字段"><a href="#添加字段" class="headerlink" title="添加字段"></a>添加字段</h5><p>语法：<code>alter table 表名 add 新字段名 数据类型[约束条件][FIRST|AFTER] 已存在字段名;</code></p>
+<p><font style="color:red;font-size:16px">若不做[FIRST|AFTER]的位置说明,默认放在表的最后一列.</font></p>
+<ul>
+<li>在表的最后一列添加字段，<code>ALTER TABLE Mall_products ADD prod_country varchar(30);</code></li>
+<li>在表的第一列添加字段，<code>ALTER TABLE Mall_products ADD prod_country varchar(30) FIRST;</code></li>
+<li>在表的指定列后添加字段，<code>ALTER TABLE Mall_products ADD prod_country varchar(30) AFTER prod_name;</code></li>
+</ul>
+<h5 id="删除字段"><a href="#删除字段" class="headerlink" title="删除字段"></a>删除字段</h5><p>语法：<code>alter table 表名 drop字段名;</code></p>
+<p>例如：<code>alter table mall_products drop prod_price;</code></p>
+<h4 id="9-修改字段的排列位置"><a href="#9-修改字段的排列位置" class="headerlink" title="9.修改字段的排列位置"></a>9.修改字段的排列位置</h4><p>语法：<code>alter table 表名 modify 字段1 数据类型 FIRST|AFTER 字段名2</code></p>
+<ul>
+<li>修改字段为表的第一个字段，<code>ALTER TABLE Mall_products MODIFY prod_price FLOAT FIRST;</code></li>
+<li>修改字段到表的指定列之后，<code>ALTER TABLE Mall_products MODIFY prod_price FLOAT AFTER prod_country;</code></li>
+</ul>
+<h4 id="10-删除表的外键约束"><a href="#10-删除表的外键约束" class="headerlink" title="10.删除表的外键约束"></a>10.删除表的外键约束</h4><p>语法：<code>alter table 表名 drop foreign key 外键约束名</code></p>
+<p><font style="color:red;font-size:16px">这个外建名，就是添加约束时的一个外键名</font></p>
+<h4 id="11-数据操作"><a href="#11-数据操作" class="headerlink" title="11.数据操作"></a>11.数据操作</h4><h5 id="（1）插入数据"><a href="#（1）插入数据" class="headerlink" title="（1）插入数据"></a>（1）插入数据</h5><p>语法：<code>insert into 表名(字段名) values(内容)</code></p>
+<p>例如：<code>insert into mall_products(id,country_id) values(1,86);</code></p>
+<p>也可以插入多条记录,语法：<code>INSERT INTO 表名 (字段名) VALUES (内容1), (内容2), (内容3);</code></p>
+<h5 id="（2）更新数据"><a href="#（2）更新数据" class="headerlink" title="（2）更新数据"></a>（2）更新数据</h5><p>语法：<code>UPDATE 表名 SET 字段名1 = 内容1, 字段名2 = 内容2, 字段名3 = 内容3 WHERE 过滤条件;</code></p>
+<p>例如：<code>update mall_products set country_name='Pakistan',country_id=92 where id = 2;</code></p>
+<p><font style="color:red;font-size:16px">修改id为2的元组内容</font></p>
+<h5 id="（3）删除数据"><a href="#（3）删除数据" class="headerlink" title="（3）删除数据"></a>（3）删除数据</h5><p>语法：<code>delete from 表名 where 条件语句;</code></p>
+<p>例如：delete from mall_product where id =2 or id =3; 同时删除两行。</p>
+<p>delete from 表名; 删除表中所有行</p>
+<p>truncate table 表名; 删除的是表</p>
+<h4 id="12-SELECT查询"><a href="#12-SELECT查询" class="headerlink" title="12.SELECT查询"></a>12.SELECT查询</h4><h5 id="1-查询数据表中字段的内容"><a href="#1-查询数据表中字段的内容" class="headerlink" title="(1)查询数据表中字段的内容"></a>(1)查询数据表中字段的内容</h5><ul>
+<li><p>查询数据表中指定字段的内容</p>
+<p>语法格式：SELECT 字段名 FROM 表名;<br>当同时查询”多个字段”下的内容时，只需要在字段之间加入逗号。<br>语法格式：SELECT 字段名1,字段名2 FROM 表名;</p>
+</li>
+<li><p>查询数据表中的所有内容</p>
+<p>SELECT * FROM 表名;</p>
+</li>
+</ul>
+<p><code>小提示： MySQL 中的 SQL 语句对关键字的大小写不敏感， SELECT 和 select 是一样的。 但是许多开发者更喜欢将关键字大写，表名和字段名使用小写，养成这种习惯，以后写出来的脚本就更容易阅读和维护了。</code></p>
+<h5 id="2-带IN关键字条件查询"><a href="#2-带IN关键字条件查询" class="headerlink" title="(2)带IN关键字条件查询"></a>(2)带IN关键字条件查询</h5><p>语法格式：<code>SELECT 字段名 FORM 表名 WHERE 字段名 IN(n1,n2,n3,...);</code><br>        等价于 SELECT 字段名 FROM 表名 WHERE 字段名 = n1 OR 字段名 = n2 OR 字段名……;</p>
+<h5 id="3-带NOT-IN关键字查询"><a href="#3-带NOT-IN关键字查询" class="headerlink" title="(3)带NOT IN关键字查询"></a>(3)带NOT IN关键字查询</h5><p>语法格式：<code>SELECT 字段名 FROM 表名 WHERE 字段名 NOT IN(n1,n2,n3,...);</code></p>
+<h5 id="4-带BETWEEN-AND的范围查询"><a href="#4-带BETWEEN-AND的范围查询" class="headerlink" title="(4)带BETWEEN AND的范围查询"></a>(4)带BETWEEN AND的范围查询</h5><p>语法格式：<code>SELECT 字段名 FROM 表名 WHERE 字段名 BETWEEN n1 AND n2; </code></p>
+<h5 id="5-带NOT-BETWEEN-AND关键字的查询"><a href="#5-带NOT-BETWEEN-AND关键字的查询" class="headerlink" title="(5)带NOT BETWEEN AND关键字的查询"></a>(5)带NOT BETWEEN AND关键字的查询</h5><p>语法格式：<code>SELECT 字段名 FROM 表名 WHERE 字段名 NOT BETWEEN n1 AND n2; </code></p>
+<h5 id="6-带LIKE的字符匹配查询"><a href="#6-带LIKE的字符匹配查询" class="headerlink" title="(6)带LIKE的字符匹配查询"></a>(6)带LIKE的字符匹配查询</h5><p>语法格式：<code>SELECT 字段名 FROM 表名 WHERE 字段名 LIKE '字符%';</code>  其中 % 的位置可以根据需要在字符间变化。<br>B开头的字符，用B%表示，B在中间，用%B%表示。<br>注：对于%B%,通配符%告诉MySQL，返回字符串中间带B字符的记录，不管B前面和后面分别有多少字符。<br>也可以使用通配符_模糊匹配数据内容，但下划线通配符_只能模糊匹配1个字符，如果要匹配多个字符，要多次使用。</p>
+<h5 id="7-去除重复结果"><a href="#7-去除重复结果" class="headerlink" title="(7)去除重复结果"></a>(7)去除重复结果</h5><p>语法格式：<code>SELECT DISTINCT 字段名 FROM 表名;</code></p>
+<h5 id="8-带AND与OR的多条件查询"><a href="#8-带AND与OR的多条件查询" class="headerlink" title="(8) 带AND与OR的多条件查询"></a>(8) 带AND与OR的多条件查询</h5><ul>
+<li><p>AND</p>
+<p>语法格式：<code>SELECT 字段名 FROM 表名 WHERE 表达式1 AND 表达式2; </code><br>例如：SELECT * FROM Mall_products WHERE prod_name LIKE ‘%toy%’ AND prod_price &gt; 5;</p>
+</li>
+<li><p>OR</p>
+<p>语法格式：<code>SELECT 字段名 FROM 表名 WHERE 表达式1 OR 表达式2;</code><br>注: OR 可以和 AND 一起使用。但是 AND 的优先级要高于 OR 的优先级.<br>推荐使用 IN 关键字.</p>
+</li>
+</ul>
+<h5 id="9-对查询结果排序"><a href="#9-对查询结果排序" class="headerlink" title="(9)对查询结果排序"></a>(9)对查询结果排序</h5><p>语法格式：<code>SELECT 字段名 FROM 表名 ORDER BY 字段名 [ASC[DESC]];</code><br>        ASC 升序关键字<br>        DESC 降序关键字</p>
+<h5 id="10-分组查询"><a href="#10-分组查询" class="headerlink" title="(10)分组查询"></a>(10)分组查询</h5><p>语法格式：<code>SELECT 字段名 FROM 表名 GROUP BY 字段名;</code><br>        注：查询的是每个分组中 首次出现的一条记录。</p>
+<h5 id="11-用LIMIT限制查询结果数量"><a href="#11-用LIMIT限制查询结果数量" class="headerlink" title="(11)用LIMIT限制查询结果数量"></a>(11)用LIMIT限制查询结果数量</h5><p>语法格式：<code>SELECT 字段名 FROM 表名 LIMIT [OFFSET,] 记录数;</code><br>参数说明：<br>第一个参数，OFFSET，可选参数，表示偏移量，如果不指定默认值为0，表示从查询结果的第一条记录开始，若偏移量为1，则从查询结果中的第二条记录开始，以此类推。<br>第二个参数，记录数，表示返回查询结果的条数。<br>注：order by 放在限制查询语句之前，选择条件结果之后。</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined">Yanhuo</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="http://yanhuoi.github.io/2021/12/02/database/">http://yanhuoi.github.io/2021/12/02/database/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://yanhuoi.github.io" target="_blank">Yanhuo's Blog</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E6%80%BB%E7%BB%93/">总结</a><a class="post-meta__tags" href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/">数据库</a><a class="post-meta__tags" href="/tags/%E8%AF%AD%E6%B3%95/">语法</a></div><div class="post_share"><div class="social-share" data-image="/img/6.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><div class="post-reward"><div class="reward-button"><i class="fas fa-qrcode"></i> 打赏</div><div class="reward-main"><ul class="reward-all"><li class="reward-item"><a href="/img/reward/wechat.png" target="_blank"><img class="post-qr-code-img" src="/img/reward/wechat.png" alt="wechat"/></a><div class="post-qr-code-desc">wechat</div></li><li class="reward-item"><a href="/img/reward/alipay.png" target="_blank"><img class="post-qr-code-img" src="/img/reward/alipay.png" alt="alipay"/></a><div class="post-qr-code-desc">alipay</div></li></ul></div></div><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><div><a href="/2021/11/22/First_jw/" title="计算机网络个人总结"><img class="cover" src="/img/6.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2021-11-22</div><div class="title">计算机网络个人总结</div></div></a></div></div></div><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div class="vcomment" id="vcomment"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/img/author.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">Yanhuo</div><div class="author-info__description">往者不可谏，来者犹可追！</div></div><div class="card-info-data is-center"><div class="card-info-data-item"><a href="/archives/"><div class="headline">文章</div><div class="length-num">5</div></a></div><div class="card-info-data-item"><a href="/tags/"><div class="headline">标签</div><div class="length-num">12</div></a></div><div class="card-info-data-item"><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/yanhuoi"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/yanhuoi" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:yanhuoi2001@gmail.com" target="_blank" title="Email"><i class="fa-solid fa-square-envelope"></i></a><a class="social-icon" href="/atom.xml" target="_blank" title=""><i class="fa-solid fa-rss"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">希望努力终将不被辜负，实现自己的愿望！ <img src="/img/info.png" with="200px" height="150px"/></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E5%BA%93%E5%92%8C%E8%A1%A8%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C"><span class="toc-number">1.</span> <span class="toc-text">数据库和表的基本操作</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-%E5%88%9B%E5%BB%BA%E6%95%B0%E6%8D%AE%E5%BA%93"><span class="toc-number">1.1.</span> <span class="toc-text">1.创建数据库</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-%E5%88%9B%E5%BB%BA%E8%A1%A8"><span class="toc-number">1.2.</span> <span class="toc-text">2.创建表</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-%E4%BD%BF%E7%94%A8%E4%B8%BB%E9%94%AE%E7%BA%A6%E6%9D%9F"><span class="toc-number">1.3.</span> <span class="toc-text">3.使用主键约束</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-%E5%A4%96%E9%94%AE%E7%BA%A6%E6%9D%9F"><span class="toc-number">1.4.</span> <span class="toc-text">4.外键约束</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5-%E6%B7%BB%E5%8A%A0%E5%B8%B8%E7%94%A8%E7%BA%A6%E6%9D%9F"><span class="toc-number">1.5.</span> <span class="toc-text">5.添加常用约束</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#6-%E4%BF%AE%E6%94%B9%E8%A1%A8%E5%90%8D"><span class="toc-number">1.6.</span> <span class="toc-text">6.修改表名</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#7-%E4%BF%AE%E6%94%B9%E5%AD%97%E6%AE%B5%E5%90%8D%E5%8F%8A%E5%AD%97%E6%AE%B5%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="toc-number">1.7.</span> <span class="toc-text">7.修改字段名及字段数据类型</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E4%BF%AE%E6%94%B9%E5%AD%97%E6%AE%B5%E5%90%8D"><span class="toc-number">1.7.1.</span> <span class="toc-text">修改字段名</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E4%BF%AE%E6%94%B9%E5%AD%97%E6%AE%B5%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="toc-number">1.7.2.</span> <span class="toc-text">修改字段数据类型</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#8-%E6%B7%BB%E5%8A%A0%E5%88%A0%E9%99%A4%E5%AD%97%E6%AE%B5"><span class="toc-number">1.8.</span> <span class="toc-text">8.添加删除字段</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%B7%BB%E5%8A%A0%E5%AD%97%E6%AE%B5"><span class="toc-number">1.8.1.</span> <span class="toc-text">添加字段</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%88%A0%E9%99%A4%E5%AD%97%E6%AE%B5"><span class="toc-number">1.8.2.</span> <span class="toc-text">删除字段</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#9-%E4%BF%AE%E6%94%B9%E5%AD%97%E6%AE%B5%E7%9A%84%E6%8E%92%E5%88%97%E4%BD%8D%E7%BD%AE"><span class="toc-number">1.9.</span> <span class="toc-text">9.修改字段的排列位置</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#10-%E5%88%A0%E9%99%A4%E8%A1%A8%E7%9A%84%E5%A4%96%E9%94%AE%E7%BA%A6%E6%9D%9F"><span class="toc-number">1.10.</span> <span class="toc-text">10.删除表的外键约束</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#11-%E6%95%B0%E6%8D%AE%E6%93%8D%E4%BD%9C"><span class="toc-number">1.11.</span> <span class="toc-text">11.数据操作</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%EF%BC%881%EF%BC%89%E6%8F%92%E5%85%A5%E6%95%B0%E6%8D%AE"><span class="toc-number">1.11.1.</span> <span class="toc-text">（1）插入数据</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%EF%BC%882%EF%BC%89%E6%9B%B4%E6%96%B0%E6%95%B0%E6%8D%AE"><span class="toc-number">1.11.2.</span> <span class="toc-text">（2）更新数据</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%EF%BC%883%EF%BC%89%E5%88%A0%E9%99%A4%E6%95%B0%E6%8D%AE"><span class="toc-number">1.11.3.</span> <span class="toc-text">（3）删除数据</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#12-SELECT%E6%9F%A5%E8%AF%A2"><span class="toc-number">1.12.</span> <span class="toc-text">12.SELECT查询</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#1-%E6%9F%A5%E8%AF%A2%E6%95%B0%E6%8D%AE%E8%A1%A8%E4%B8%AD%E5%AD%97%E6%AE%B5%E7%9A%84%E5%86%85%E5%AE%B9"><span class="toc-number">1.12.1.</span> <span class="toc-text">(1)查询数据表中字段的内容</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-%E5%B8%A6IN%E5%85%B3%E9%94%AE%E5%AD%97%E6%9D%A1%E4%BB%B6%E6%9F%A5%E8%AF%A2"><span class="toc-number">1.12.2.</span> <span class="toc-text">(2)带IN关键字条件查询</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#3-%E5%B8%A6NOT-IN%E5%85%B3%E9%94%AE%E5%AD%97%E6%9F%A5%E8%AF%A2"><span class="toc-number">1.12.3.</span> <span class="toc-text">(3)带NOT IN关键字查询</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#4-%E5%B8%A6BETWEEN-AND%E7%9A%84%E8%8C%83%E5%9B%B4%E6%9F%A5%E8%AF%A2"><span class="toc-number">1.12.4.</span> <span class="toc-text">(4)带BETWEEN AND的范围查询</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#5-%E5%B8%A6NOT-BETWEEN-AND%E5%85%B3%E9%94%AE%E5%AD%97%E7%9A%84%E6%9F%A5%E8%AF%A2"><span class="toc-number">1.12.5.</span> <span class="toc-text">(5)带NOT BETWEEN AND关键字的查询</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#6-%E5%B8%A6LIKE%E7%9A%84%E5%AD%97%E7%AC%A6%E5%8C%B9%E9%85%8D%E6%9F%A5%E8%AF%A2"><span class="toc-number">1.12.6.</span> <span class="toc-text">(6)带LIKE的字符匹配查询</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#7-%E5%8E%BB%E9%99%A4%E9%87%8D%E5%A4%8D%E7%BB%93%E6%9E%9C"><span class="toc-number">1.12.7.</span> <span class="toc-text">(7)去除重复结果</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#8-%E5%B8%A6AND%E4%B8%8EOR%E7%9A%84%E5%A4%9A%E6%9D%A1%E4%BB%B6%E6%9F%A5%E8%AF%A2"><span class="toc-number">1.12.8.</span> <span class="toc-text">(8) 带AND与OR的多条件查询</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#9-%E5%AF%B9%E6%9F%A5%E8%AF%A2%E7%BB%93%E6%9E%9C%E6%8E%92%E5%BA%8F"><span class="toc-number">1.12.9.</span> <span class="toc-text">(9)对查询结果排序</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#10-%E5%88%86%E7%BB%84%E6%9F%A5%E8%AF%A2"><span class="toc-number">1.12.10.</span> <span class="toc-text">(10)分组查询</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#11-%E7%94%A8LIMIT%E9%99%90%E5%88%B6%E6%9F%A5%E8%AF%A2%E7%BB%93%E6%9E%9C%E6%95%B0%E9%87%8F"><span class="toc-number">1.12.11.</span> <span class="toc-text">(11)用LIMIT限制查询结果数量</span></a></li></ol></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2022/04/26/Begin/" title="纪念成功更新博客"><img src="/img/6.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="纪念成功更新博客"/></a><div class="content"><a class="title" href="/2022/04/26/Begin/" title="纪念成功更新博客">纪念成功更新博客</a><time datetime="2022-04-26T06:00:00.000Z" title="发表于 2022-04-26 14:00:00">2022-04-26</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/12/02/database/" title="数据库基础语法总结"><img src="/img/6.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="数据库基础语法总结"/></a><div class="content"><a class="title" href="/2021/12/02/database/" title="数据库基础语法总结">数据库基础语法总结</a><time datetime="2021-12-02T06:00:00.000Z" title="发表于 2021-12-02 14:00:00">2021-12-02</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/11/22/First_jw/" title="计算机网络个人总结"><img src="/img/6.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="计算机网络个人总结"/></a><div class="content"><a class="title" href="/2021/11/22/First_jw/" title="计算机网络个人总结">计算机网络个人总结</a><time datetime="2021-11-22T06:00:00.000Z" title="发表于 2021-11-22 14:00:00">2021-11-22</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/09/22/Maven/" title="Maven入门学习"><img src="/img/6.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Maven入门学习"/></a><div class="content"><a class="title" href="/2021/09/22/Maven/" title="Maven入门学习">Maven入门学习</a><time datetime="2021-09-22T06:00:00.000Z" title="发表于 2021-09-22 14:00:00">2021-09-22</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/09/22/%E5%88%9D%E8%AF%86typora/" title="初识typora"><img src="/img/6.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="初识typora"/></a><div class="content"><a class="title" href="/2021/09/22/%E5%88%9D%E8%AF%86typora/" title="初识typora">初识typora</a><time datetime="2021-09-22T06:00:00.000Z" title="发表于 2021-09-22 14:00:00">2021-09-22</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2021 - 2022 By Yanhuo</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div><div class="footer_custom_text">本站用于记录个人学习生活！</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="translateLink" type="button" title="简繁转换">繁</button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="chat_btn" type="button" title="聊天"><i class="fas fa-sms"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">本地搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div id="local-search-results"></div></div></div><div id="search-mask"></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script><script src="/js/search/local-search.js"></script><div class="js-pjax"><script>(() => {
+  const $mermaidWrap = document.querySelectorAll('#article-container .mermaid-wrap')
+  if ($mermaidWrap.length) {
+    window.runMermaid = () => {
+      window.loadMermaid = true
+      const theme = document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'default'
+
+      Array.from($mermaidWrap).forEach((item, index) => {
+        const mermaidSrc = item.firstElementChild
+        const mermaidThemeConfig = '%%{init:{ \'theme\':\'' + theme + '\'}}%%\n'
+        const mermaidID = 'mermaid-' + index
+        const mermaidDefinition = mermaidThemeConfig + mermaidSrc.textContent
+        mermaid.mermaidAPI.render(mermaidID, mermaidDefinition, (svgCode) => {
+          mermaidSrc.insertAdjacentHTML('afterend', svgCode)
+        })
+      })
+    }
+
+    const loadMermaid = () => {
+      window.loadMermaid ? runMermaid() : getScript('https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js').then(runMermaid)
+    }
+
+    window.pjax ? loadMermaid() : document.addEventListener('DOMContentLoaded', loadMermaid)
+  }
+})()</script><script>function loadValine () {
+  function initValine () {
+    const valine = new Valine(Object.assign({
+      el: '#vcomment',
+      appId: 'WPaenic1e7f3IB2EBYeCieHN-gzGzoHsz',
+      appKey: 'oizI36683c4f697mrw816nPT',
+      avatar: 'monsterid',
+      serverURLs: '',
+      emojiMaps: "",
+      path: window.location.pathname,
+      visitor: false
+    }, null))
+  }
+
+  if (typeof Valine === 'function') initValine() 
+  else getScript('https://cdn.jsdelivr.net/npm/valine/dist/Valine.min.js').then(initValine)
+}
+
+if ('Valine' === 'Valine' || !true) {
+  if (true) btf.loadComment(document.getElementById('vcomment'),loadValine)
+  else setTimeout(loadValine, 0)
+} else {
+  function loadOtherComment () {
+    loadValine()
+  }
+}</script></div><script src="http://localhost:3000/css/index.min.js"></script><script src="/js/mydesign.js"></script><script src="//code.tidio.co/7sylcfyexxr4qvth11ntjvdzvalygfjn.js" async="async"></script><script>function onTidioChatApiReady() {
+  window.tidioChatApi.hide();
+  window.tidioChatApi.on("close", function() {
+    window.tidioChatApi.hide();
+  });
+}
+if (window.tidioChatApi) {
+  window.tidioChatApi.on("ready", onTidioChatApiReady);
+} else {
+  document.addEventListener("tidioChat-ready", onTidioChatApiReady);
+}
+
+var chatBtnFn = () => {
+  document.getElementById("chat_btn").addEventListener("click", function(){
+    window.tidioChatApi.show();
+    window.tidioChatApi.open();
+  });
+}
+chatBtnFn()
+</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script><script src="https://cdn.jsdelivr.net/gh/metowolf/MetingJS@1.2/dist/Meting.min.js"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div><!-- hexo injector body_end start --> <script data-pjax>if(document.getElementById('recent-posts') && (location.pathname ==='/'|| '/' ==='all')){
+    var parent = document.getElementById('recent-posts');
+    var child = '<div class="recent-post-item" style="width:100%;height: auto"><div id="catalog_magnet"><div class="magnet_item"><a class="magnet_link" target="_blank" rel="noopener" href="http://150.158.51.167/categories/学习/"><div class="magnet_link_context" style=""><span style="font-weight:500;flex:1">🎮 课程学习 (2)</span><span style="padding:0px 4px;border-radius: 8px;"><i class="fas fa-arrow-circle-right"></i></span></div></a></div><div class="magnet_item"><a class="magnet_link" target="_blank" rel="noopener" href="http://150.158.51.167/categories/生活/"><div class="magnet_link_context" style=""><span style="font-weight:500;flex:1">🐱‍👓 生活趣闻 (1)</span><span style="padding:0px 4px;border-radius: 8px;"><i class="fas fa-arrow-circle-right"></i></span></div></a></div><div class="magnet_item"><a class="magnet_link" target="_blank" rel="noopener" href="http://150.158.51.167/categories/Coding/"><div class="magnet_link_context" style=""><span style="font-weight:500;flex:1">👩‍💻 编程学习 (2)</span><span style="padding:0px 4px;border-radius: 8px;"><i class="fas fa-arrow-circle-right"></i></span></div></a></div><div class="magnet_item" style="visibility: hidden"></div><a class="magnet_link_more"  target="_blank" rel="noopener" href="http://150.158.51.167/categories" style="flex:1;text-align: center;margin-bottom: 10px;">查看更多...</a></div></div>';
+    console.log('已挂载magnet')
+    parent.insertAdjacentHTML("afterbegin",child)}
+     </script><style>#catalog_magnet{flex-wrap: wrap;display: flex;width:100%;justify-content:space-between;padding: 10px 10px 0 10px;align-content: flex-start;}.magnet_item{flex-basis: calc(50% - 5px);background: #f2f2f2;margin-bottom: 10px;border-radius: 8px;transition: all 0.2s ease-in-out;}.magnet_item:hover{background: #b30070}.magnet_link_more{color:#555}.magnet_link{color:black}.magnet_link:hover{color:white}@media screen and (max-width: 600px) {.magnet_item {flex-basis: 100%;}}.magnet_link_context{display:flex;padding: 10px;font-size:16px;transition: all 0.2s ease-in-out;}.magnet_link_context:hover{padding: 10px 20px;}</style>
+    <style></style>
+  <script data-pjax src="https://cdn.jsdelivr.net/gh/Zfour/hexo-github-calendar@1.21/hexo_githubcalendar.js"></script>
+  <script data-pjax>
+        function GithubCalendarConfig(){
+            var git_githubapiurl ="https://python-github-calendar-api.vercel.app/api?yanhuoi";
+            var git_color =['#ebedf0', '#f1f8ff', '#dbedff', '#c8e1ff', '#79b8ff', '#2188ff', '#0366d6', '#005cc5', '#044289', '#032f62', '#05264c'];
+            var git_user ="yanhuoi";
+            var parent_div_git = document.getElementById('recent-posts');
+            var git_div_html = '<div class="recent-post-item" style="width:100%;height:auto;padding:10px;"><div id="github_loading" style="width:10%;height:100%;margin:0 auto;display: block"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"  viewBox="0 0 50 50" style="enable-background:new 0 0 50 50" xml:space="preserve"><path fill="#d0d0d0" d="M25.251,6.461c-10.318,0-18.683,8.365-18.683,18.683h4.068c0-8.071,6.543-14.615,14.615-14.615V6.461z" transform="rotate(275.098 25 25)"><animateTransform attributeType="xml" attributeName="transform" type="rotate" from="0 25 25" to="360 25 25" dur="0.6s" repeatCount="indefinite"></animateTransform></path></svg></div><div id="github_container"></div></div>';
+            if(parent_div_git && location.pathname =='/'){
+                console.log('已挂载github calendar')
+                // parent_div_git.innerHTML=git_div_html+parent_div_git.innerHTML // 无报错，但不影响使用(支持pjax跳转)
+                parent_div_git.insertAdjacentHTML("afterbegin",git_div_html) // 有报错，但不影响使用(支持pjax跳转)
+            };
+            GithubCalendar(git_githubapiurl,git_color,git_user)
+        }
+        if(document.getElementById('recent-posts')){
+            GithubCalendarConfig()
+        }
+    </script>
+    <style>#github_container{min-height:280px}@media screen and (max-width:650px) {#github_container{background-image:;min-height:0px}}</style>
+    <style></style><!-- hexo injector body_end end --><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/haruto.model.json"},"display":{"position":"left","width":145,"height":315},"mobile":{"show":true,"scale":0.5},"react":{"opacityDefault":0.7,"opacityOnHover":0.8},"log":false});</script></body></html>
