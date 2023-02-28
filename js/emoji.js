@@ -14,42 +14,42 @@ function owoBig() {
     body.appendChild(div)
 
     // 构造observer
-    let observer = new MutationObserver(mutations =&gt; {
+    let observer = new MutationObserver(mutations => {
 
-        for (let i = 0; i &lt; mutations.length; i++) {
+        for (let i = 0; i < mutations.length; i++) {
             let dom = mutations[i].addedNodes,
                 owo_body = '';
-            if (dom.length == 2 &amp;&amp; dom[1].className == 'OwO-body') owo_body = dom[1];
+            if (dom.length == 2 && dom[1].className == 'OwO-body') owo_body = dom[1];
             // 如果需要在评论内容中启用此功能请解除下面的注释
-            // else if (dom.length == 1 &amp;&amp; dom[0].className == 'tk-comment') owo_body = dom[0];
+            // else if (dom.length == 1 && dom[0].className == 'tk-comment') owo_body = dom[0];
             else continue;
             
             // 禁用右键（手机端长按会出现右键菜单，为了体验给禁用掉）
-            if (document.body.clientWidth &lt;= 768) owo_body.addeventlistener('contextmenu', e&gt; e.preventDefault());
+            if (document.body.clientWidth <= 768) owo_body.addEventListener('contextmenu', e => e.preventDefault());
             // 鼠标移入
-            owo_body.onmouseover = (e) =&gt; {
-                    if (flag &amp;&amp; e.target.tagName == 'IMG') {
+            owo_body.onmouseover = (e) => {
+                    if (flag && e.target.tagName == 'IMG') {
                         flag = 0;
                         // 移入300毫秒后显示盒子
-                        owo_time = setTimeout(() =&gt; {
-                            let height = e.path[0].clientHeight * m, // 盒子高
-                                width = e.path[0].clientWidth * m, // 盒子宽
-                                left = (e.x - e.offsetX) - (width - e.path[0].clientWidth) / 2, // 盒子与屏幕左边距离
+                        owo_time = setTimeout(() => {
+                            let height = e.target.clientHeight * m, // 盒子高 2023-02-16更新
+                                width = e.target.clientWidth * m, // 盒子宽 2023-02-16更新
+                                left = (e.x - e.offsetX) - (width - e.target.clientWidth) / 2, // 盒子与屏幕左边距离 2023-02-16更新
                                 top = e.y - e.offsetY; // 盒子与屏幕顶部距离
 
-                            if ((left + width) &gt; body.clientWidth) left -= ((left + width) - body.clientWidth + 10); // 右边缘检测，防止超出屏幕
-                            if (left &lt; 0) left = 10; // 左边缘检测，防止超出屏幕
+                            if ((left + width) > body.clientWidth) left -= ((left + width) - body.clientWidth + 10); // 右边缘检测，防止超出屏幕
+                            if (left < 0) left = 10; // 左边缘检测，防止超出屏幕
                             // 设置盒子样式
                             div.style.cssText = `display:flex; height:${height}px; width:${width}px; left:${left}px; top:${top}px;`;
                             // 在盒子中插入图片
-                            div.innerHTML = `<img src="/js/emoji.j/${e.target.src}">`
+                            div.innerHTML = `<img src="${e.target.src}">`
                         }, 300);
                     }
                 };
             // 鼠标移出隐藏盒子
-            owo_body.onmouseout = () =&gt; { div.style.display = 'none', flag = 1, clearTimeout(owo_time); }
+            owo_body.onmouseout = () => { div.style.display = 'none', flag = 1, clearTimeout(owo_time); }
         }
 
     })
     observer.observe(document.getElementById('post-comment'), { subtree: true, childList: true }) // 监听的 元素 和 配置项
-}<!--=-->
+}
