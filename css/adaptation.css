@@ -1,9 +1,13 @@
 /* #大屏适配 */
+
 .layout{
     max-width:1280px;
-  }
+}
+#content-inner {
+    max-width:1280px;
+}
 
-  .aside-content{
+.aside-content{
     max-width:312px;
     min-width:300px;
 }
