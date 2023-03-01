@@ -2,9 +2,63 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://yanhuoi.work/manifest.json</loc>
+    
+    <lastmod>2023-03-01</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://yanhuoi.work/artitalk/index.html</loc>
+    
+    <lastmod>2023-03-01</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://yanhuoi.work/categories/index.html</loc>
+    
+    <lastmod>2023-03-01</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://yanhuoi.work/contact/index.html</loc>
+    
+    <lastmod>2023-03-01</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://yanhuoi.work/essay/index.html</loc>
     
-    <lastmod>2023-02-28</lastmod>
+    <lastmod>2023-03-01</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://yanhuoi.work/friends/index.html</loc>
+    
+    <lastmod>2023-03-01</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://yanhuoi.work/tags/index.html</loc>
+    
+    <lastmod>2023-03-01</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -13,7 +67,16 @@
   <url>
     <loc>https://yanhuoi.work/link/index.html</loc>
     
-    <lastmod>2023-02-25</lastmod>
+    <lastmod>2023-03-01</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://yanhuoi.work/about/index.html</loc>
+    
+    <lastmod>2023-03-01</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -23,33 +86,6 @@
     <loc>https://yanhuoi.work/posts/fcb8725d.html</loc>
     
     <lastmod>2023-02-25</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://yanhuoi.work/tags/index.html</loc>
-    
-    <lastmod>2023-02-24</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://yanhuoi.work/categories/index.html</loc>
-    
-    <lastmod>2023-02-24</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://yanhuoi.work/about/index.html</loc>
-    
-    <lastmod>2023-02-24</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -68,24 +104,6 @@
     <loc>https://yanhuoi.work/posts/24844.html</loc>
     
     <lastmod>2022-04-26</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://yanhuoi.work/friends/index.html</loc>
-    
-    <lastmod>2022-04-25</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://yanhuoi.work/artitalk/index.html</loc>
-    
-    <lastmod>2022-04-25</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -122,15 +140,6 @@
     <loc>https://yanhuoi.work/posts/51393.html</loc>
     
     <lastmod>2022-01-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://yanhuoi.work/contact/index.html</loc>
-    
-    <lastmod>2021-03-06</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
