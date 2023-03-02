@@ -1,9 +1,9 @@
 https://yanhuoi.work/manifest.json
 https://yanhuoi.work/artitalk/index.html
 https://yanhuoi.work/contact/index.html
-https://yanhuoi.work/friends/index.html
 https://yanhuoi.work/categories/index.html
 https://yanhuoi.work/essay/index.html
+https://yanhuoi.work/friends/index.html
 https://yanhuoi.work/link/index.html
 https://yanhuoi.work/tags/index.html
 https://yanhuoi.work/about/index.html
@@ -28,6 +28,6 @@ https://yanhuoi.work/tags/%E8%AF%AD%E6%B3%95/
 https://yanhuoi.work/tags/Typora/
 https://yanhuoi.work/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BC%96%E7%A0%81/
 https://yanhuoi.work/categories/Hexo/
+https://yanhuoi.work/categories/%E7%94%9F%E6%B4%BB/
 https://yanhuoi.work/categories/%E5%AD%A6%E4%B9%A0/
 https://yanhuoi.work/categories/Coding/
-https://yanhuoi.work/categories/%E7%94%9F%E6%B4%BB/
