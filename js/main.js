@@ -471,18 +471,10 @@ document.addEventListener('DOMContentLoaded', function () {
         activateDarkMode()
         saveToLocal.set('theme', 'dark', 2)
         GLOBAL_CONFIG.Snackbar !== undefined && btf.snackbarShow(GLOBAL_CONFIG.Snackbar.day_to_night)
-      //   document.querySelectorAll('#catalog_magnet > div').forEach(div => {
-      //   div.style.background = '#1e1e1e'
-      //   div.children[0].style.color="#faebd7"
-      // })
       } else {
         activateLightMode()
         saveToLocal.set('theme', 'light', 2)
         GLOBAL_CONFIG.Snackbar !== undefined && btf.snackbarShow(GLOBAL_CONFIG.Snackbar.night_to_day)
-      //   document.querySelectorAll('#catalog_magnet > div').forEach(div => {
-      //     div.style.background = '#C6C6C6'
-      //     div.children[0].style.color="black"
-      // })
       }
       // handle some cases
       typeof utterancesTheme === 'function' && utterancesTheme()

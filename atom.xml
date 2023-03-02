@@ -6,7 +6,7 @@
   <link href="https://yanhuoi.work/atom.xml" rel="self"/>
   
   <link href="https://yanhuoi.work/"/>
-  <updated>2023-02-25T00:00:00.000Z</updated>
+  <updated>2023-03-02T09:00:00.000Z</updated>
   <id>https://yanhuoi.work/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>纪念博客魔改完成</title>
+    <link href="https://yanhuoi.work/posts/60d9c4db.html"/>
+    <id>https://yanhuoi.work/posts/60d9c4db.html</id>
+    <published>2023-03-02T09:00:00.000Z</published>
+    <updated>2023-03-02T09:00:00.000Z</updated>
+    
+    
+    <summary type="html">对于Typora编辑器使用的部分总结</summary>
+    
+    
+    
+    <category term="Coding" scheme="https://yanhuoi.work/categories/Coding/"/>
+    
+    
+    <category term="Typora" scheme="https://yanhuoi.work/tags/Typora/"/>
+    
+    <category term="计算机编码" scheme="https://yanhuoi.work/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BC%96%E7%A0%81/"/>
+    
+  </entry>
   
   <entry>
     <title>博客魔改教程总结(一)</title>
@@ -63,7 +84,7 @@
   </entry>
   
   <entry>
-    <title>纪念成功更新博客</title>
+    <title>博客魔改教程总结(二)</title>
     <link href="https://yanhuoi.work/posts/24844.html"/>
     <id>https://yanhuoi.work/posts/24844.html</id>
     <published>2022-04-26T06:00:00.000Z</published>
@@ -105,11 +126,11 @@
     <category term="学习" scheme="https://yanhuoi.work/categories/%E5%AD%A6%E4%B9%A0/"/>
     
     
-    <category term="总结" scheme="https://yanhuoi.work/tags/%E6%80%BB%E7%BB%93/"/>
-    
     <category term="数据库" scheme="https://yanhuoi.work/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
     
     <category term="语法" scheme="https://yanhuoi.work/tags/%E8%AF%AD%E6%B3%95/"/>
+    
+    <category term="总结" scheme="https://yanhuoi.work/tags/%E6%80%BB%E7%BB%93/"/>
     
   </entry>
   
@@ -130,11 +151,11 @@
     <category term="学习" scheme="https://yanhuoi.work/categories/%E5%AD%A6%E4%B9%A0/"/>
     
     
+    <category term="总结" scheme="https://yanhuoi.work/tags/%E6%80%BB%E7%BB%93/"/>
+    
     <category term="课程学习" scheme="https://yanhuoi.work/tags/%E8%AF%BE%E7%A8%8B%E5%AD%A6%E4%B9%A0/"/>
     
     <category term="计算机网络" scheme="https://yanhuoi.work/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/"/>
-    
-    <category term="总结" scheme="https://yanhuoi.work/tags/%E6%80%BB%E7%BB%93/"/>
     
   </entry>
   

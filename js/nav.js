@@ -1,5 +1,3 @@
-
-
 // 返回顶部 显示网页阅读进度
 window.onscroll = percent; // 执行函数
 // 页面百分比
@@ -53,12 +51,4 @@ function switchDarkMode(){
   }
 
 
-  $(document).on('pjax:start', function () {
-    if (window.aplayers) {
-        for (let i = 0; i < window.aplayers.length; i++) {
-            window.aplayers[i].destroy();
-        }
-        window.aplayers = [];
-    }
-});
 
