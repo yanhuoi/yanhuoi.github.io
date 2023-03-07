@@ -2,6 +2,78 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://yanhuoi.work/music/index.html</loc>
+    
+    <lastmod>2023-03-06</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://yanhuoi.work/photos/index.html</loc>
+    
+    <lastmod>2023-03-05</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://yanhuoi.work/timeline/index.html</loc>
+    
+    <lastmod>2023-03-05</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://yanhuoi.work/posts/e8e90389.html</loc>
+    
+    <lastmod>2023-03-04</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://yanhuoi.work/tags/index.html</loc>
+    
+    <lastmod>2023-03-04</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://yanhuoi.work/link/index.html</loc>
+    
+    <lastmod>2023-03-03</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://yanhuoi.work/categories/index.html</loc>
+    
+    <lastmod>2023-03-03</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://yanhuoi.work/video/index.html</loc>
+    
+    <lastmod>2023-03-03</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://yanhuoi.work/posts/60d9c4db.html</loc>
     
     <lastmod>2023-03-02</lastmod>
@@ -20,34 +92,7 @@
   </url>
   
   <url>
-    <loc>https://yanhuoi.work/artitalk/index.html</loc>
-    
-    <lastmod>2023-03-01</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://yanhuoi.work/contact/index.html</loc>
-    
-    <lastmod>2023-03-01</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://yanhuoi.work/categories/index.html</loc>
-    
-    <lastmod>2023-03-01</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://yanhuoi.work/friends/index.html</loc>
     
     <lastmod>2023-03-01</lastmod>
     
@@ -65,7 +110,7 @@
   </url>
   
   <url>
-    <loc>https://yanhuoi.work/link/index.html</loc>
+    <loc>https://yanhuoi.work/artitalk/index.html</loc>
     
     <lastmod>2023-03-01</lastmod>
     
@@ -74,7 +119,7 @@
   </url>
   
   <url>
-    <loc>https://yanhuoi.work/tags/index.html</loc>
+    <loc>https://yanhuoi.work/friends/index.html</loc>
     
     <lastmod>2023-03-01</lastmod>
     
@@ -157,7 +202,7 @@
 
   <url>
     <loc>https://yanhuoi.work/</loc>
-    <lastmod>2023-03-02</lastmod>
+    <lastmod>2023-03-07</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -165,84 +210,91 @@
   
   <url>
     <loc>https://yanhuoi.work/tags/Maven/</loc>
-    <lastmod>2023-03-02</lastmod>
+    <lastmod>2023-03-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://yanhuoi.work/tags/JavaWeb/</loc>
-    <lastmod>2023-03-02</lastmod>
+    <lastmod>2023-03-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://yanhuoi.work/tags/Web%E5%89%8D%E7%AB%AF/</loc>
-    <lastmod>2023-03-02</lastmod>
+    <lastmod>2023-03-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://yanhuoi.work/tags/%E5%AD%A6%E4%B9%A0/</loc>
-    <lastmod>2023-03-02</lastmod>
+    <lastmod>2023-03-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://yanhuoi.work/tags/%E7%BB%8F%E5%8E%86/</loc>
-    <lastmod>2023-03-02</lastmod>
+    <lastmod>2023-03-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://yanhuoi.work/tags/Typora/</loc>
-    <lastmod>2023-03-02</lastmod>
+    <lastmod>2023-03-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://yanhuoi.work/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BC%96%E7%A0%81/</loc>
-    <lastmod>2023-03-02</lastmod>
+    <lastmod>2023-03-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://yanhuoi.work/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/</loc>
-    <lastmod>2023-03-02</lastmod>
+    <lastmod>2023-03-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://yanhuoi.work/tags/%E8%AF%AD%E6%B3%95/</loc>
-    <lastmod>2023-03-02</lastmod>
+    <lastmod>2023-03-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://yanhuoi.work/tags/%E6%80%BB%E7%BB%93/</loc>
-    <lastmod>2023-03-02</lastmod>
+    <lastmod>2023-03-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://yanhuoi.work/tags/%E8%AF%BE%E7%A8%8B%E5%AD%A6%E4%B9%A0/</loc>
-    <lastmod>2023-03-02</lastmod>
+    <lastmod>2023-03-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://yanhuoi.work/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/</loc>
-    <lastmod>2023-03-02</lastmod>
+    <lastmod>2023-03-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://yanhuoi.work/tags/Hexo/</loc>
+    <lastmod>2023-03-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
@@ -251,28 +303,28 @@
   
   <url>
     <loc>https://yanhuoi.work/categories/Coding/</loc>
-    <lastmod>2023-03-02</lastmod>
+    <lastmod>2023-03-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://yanhuoi.work/categories/Hexo/</loc>
-    <lastmod>2023-03-02</lastmod>
+    <lastmod>2023-03-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://yanhuoi.work/categories/%E7%94%9F%E6%B4%BB/</loc>
-    <lastmod>2023-03-02</lastmod>
+    <lastmod>2023-03-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://yanhuoi.work/categories/%E5%AD%A6%E4%B9%A0/</loc>
-    <lastmod>2023-03-02</lastmod>
+    <lastmod>2023-03-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>

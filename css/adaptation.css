@@ -1,16 +1,16 @@
 /* #大屏适配 */
 
-.layout{
-    max-width:1280px;
+.layout#content-inner{
+    max-width:1400px;
 }
 #content-inner {
-    max-width:1280px;
+    max-width:1400px;
 }
 
-.aside-content{
+/* .aside-content{
     max-width:312px;
     min-width:300px;
-}
+} */
 /* .recent-posts{
   width:auto!important;
 } */
@@ -21,10 +21,19 @@
     }
 }
 /* #分页适配 */
-/* #archive,#page,#category,#tag{
-    width:100%;
+#archive,#page,#category,#tag{
+    width:78%;
 }
-.page .aside-content{
+/* .page .aside-content{
     display: none;
 } */
 
+
+/* 宽度自修改 */
+#aside-content {
+    width: 22%;
+}
+
+.layout > div:first-child {
+    width: 78%;
+}

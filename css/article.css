@@ -39,7 +39,7 @@ nav#pagination {
 }
 #recent-posts > .recent-post-item .post_cover {
   width: 100%; /*图片封面宽度*/
-    height: 200px;/*图片封面高度*/
+    height: 230px;/*图片封面高度*/
 }
 #recent-posts > .recent-post-item .post_cover img.post_bg {
   width: 100%;/*图片宽度*/

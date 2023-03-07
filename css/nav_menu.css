@@ -174,12 +174,12 @@
   }
   #nav {
     padding: 0 calc((100% - 1420px) / 2);
-    backdrop-filter: saturate(180%) blur(20px);
+    /* backdrop-filter: saturate(180%) blur(20px); */
   }
   
   #nav a {
     border-radius: 8px;
-    color: var(--font-color);
+    /* color: var(--font-color); */
   }
   .page #nav a:hover {
     color: var(--anzhiyu-white) !important;
@@ -414,6 +414,12 @@
   #page-header #nav .back-home-button {
     cursor: pointer;
     position: relative;
+  }
+  #page-header:not(.not-top-img) #nav .back-home-button {
+    color: #EEEEEE;
+  }
+  #page-header.nav-fixed:not(.not-top-img) #nav .back-home-button {
+    color: #4c4948
   }
   
   @media screen and (min-width: 1300px) {
