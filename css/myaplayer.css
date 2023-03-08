@@ -11,15 +11,24 @@
   border-radius: 1.8rem;
   border: var(--style-border);
   background: var(--card-bg);
-  position: fixed;
-  top: 50px;
   opacity: 0;
   pointer-events: none;
   transition: all 0.5s;
 }
-
+#console-music-item-main {
+  display: float;
+}
+#console-music-item-list {
+  position: relative;
+  top: -500px;
+}
+#console-songsheet-item-list{
+  position: fixed;
+  top: 50px;
+}
 #console-music-item-main {
   padding: 1.3rem;
+  margin-top: 380px !important;
 }
 
 #console-music-item-main.item-show, 
