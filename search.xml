@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>英语学习记录</title>
+      <link href="/posts/4bee99b8.html"/>
+      <url>/posts/4bee99b8.html</url>
+      
+        <content type="html"><![CDATA[<div class="timeline blue"><div class="timeline-item headline"><div class="timeline-item-title"><div class="item-circle"><p>学习进程</p></div></div></div><div class="timeline-item"><div class="timeline-item-title"><div class="item-circle"><p>2023-04-19</p></div></div><div class="timeline-item-content"><ol><li>背单词</li><li>看视频</li></ol></div></div></div>]]></content>
+      
+      
+      <categories>
+          
+          <category> 考研 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Hexo </tag>
+            
+            <tag> 英语 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>外挂标签格式记录</title>
       <link href="/posts/e8e90389.html"/>
       <url>/posts/e8e90389.html</url>
@@ -155,11 +182,11 @@
       
         <tags>
             
-            <tag> 总结 </tag>
-            
             <tag> 数据库 </tag>
             
             <tag> 语法 </tag>
+            
+            <tag> 总结 </tag>
             
         </tags>
       
@@ -184,11 +211,11 @@
       
         <tags>
             
+            <tag> 总结 </tag>
+            
             <tag> 课程学习 </tag>
             
             <tag> 计算机网络 </tag>
-            
-            <tag> 总结 </tag>
             
         </tags>
       
